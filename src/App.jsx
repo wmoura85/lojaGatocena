@@ -1,8 +1,3 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-
 import React from 'react';
 import Navbar from './Navbar';
 import Banner from './Banner';
@@ -11,7 +6,7 @@ import Rodape from './Rodape';
 
 const App = () => {
   return (
-    <div className="bg-gray-100 min-h-screen">
+    <div className="bg-red-500 min-h-screen">
       <Navbar />
       <Banner />
       <Produtos />
@@ -21,4 +16,3 @@ const App = () => {
 };
 
 export default App;
-

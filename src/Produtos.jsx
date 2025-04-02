@@ -1,9 +1,12 @@
 import React from 'react';
+import camiseta1 from "./assets/camisa1.jpg";
+import camiseta2 from "./assets/camisa2.jpg";
+import camiseta3 from "./assets/camisa3.jpg";
 
 const produtos = [
-  { id: 1, nome: "Heisenpurr", categoria: "Série", imagem: "https://via.placeholder.com/400x400", preco: "R$ 59,90" },
-  { id: 2, nome: "Gatossauro Park", categoria: "Filme", imagem: "https://via.placeholder.com/400x400", preco: "R$ 59,90" },
-  { id: 3, nome: "Purrvana", categoria: "Álbum", imagem: "https://via.placeholder.com/400x400", preco: "R$ 59,90" },
+  { id: 1, nome: "Iliminapurr", categoria: "Série", imagem: camiseta1, preco: "R$ 59,90" },
+  { id: 2, nome: "Pulp Cat", categoria: "Filme", imagem: camiseta2, preco: "R$ 59,90" },
+  { id: 3, nome: "Jokepurr", categoria: "Álbum", imagem: camiseta3, preco: "R$ 59,90" },
 ];
 
 const Produtos = () => {
