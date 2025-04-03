@@ -55,7 +55,7 @@ git clone https://github.com/wmoura85/lojaGatocena.git
 
 2. Instale as dependências:
 ```bash
-cd the-catverse
+cd lojaGatocena
 npm install
 ```
 
