@@ -116,7 +116,7 @@ Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para ma
 
 ## 👥 Autores
 
-- Seu Nome - [@seu-usuario](https://github.com/seu-usuario)
+- Seu Nome - [@wmoura85](https://github.com/wmoura85/lojaGatocena.git)
 
 ## 🙏 Agradecimentos
 
