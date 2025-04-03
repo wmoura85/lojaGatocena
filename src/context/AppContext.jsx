@@ -1,6 +1,7 @@
 import React, { createContext, useContext, useState } from 'react';
 import { useCart } from '../hooks/useCart';
 
+
 const AppContext = createContext();
 
 export const AppProvider = ({ children }) => {

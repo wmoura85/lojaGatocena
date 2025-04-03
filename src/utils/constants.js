@@ -14,13 +14,13 @@ export const PRODUCT_CATEGORIES = [
 ];
 
 export const SOCIAL_MEDIA = {
-  facebook: 'https://facebook.com/gatocena',
-  instagram: 'https://instagram.com/gatocena',
-  twitter: 'https://twitter.com/gatocena',
+  facebook: 'https://facebook.com/TheCatverse',
+  instagram: 'https://instagram.com/TheCatverse',
+  twitter: 'https://twitter.com/TheCatverse',
 };
 
 export const CONTACT_INFO = {
-  email: 'contato@gatocena.com',
-  phone: '(11) 99999-9999',
-  address: 'Rua dos Gatos, 123 - São Paulo, SP',
+  email: 'contato@thecatverse.com',
+  phone: '(21) 99999-9999',
+  address: 'Rua dos Gatos, 123 - Belford-Roxo, RJ',
 }; 

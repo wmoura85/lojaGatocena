@@ -8,11 +8,15 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
 const ProdutosDestaque = () => {
+  //Contexto da aplicação
   const { addToCart } = useApp();
+  //Estado dos produtos
   const [products, setProducts] = React.useState([]);
+  //Estado de carregamento
   const [loading, setLoading] = React.useState(true);
 
   React.useEffect(() => {
+    //Função para buscar produtos
     const fetchProducts = async () => {
       try {
         const data = await api.getProducts();
@@ -24,7 +28,7 @@ const ProdutosDestaque = () => {
       }
     };
 
-    fetchProducts();
+    fetchProducts();    
   }, []);
 
   if (loading) {
@@ -72,6 +76,7 @@ const ProdutosDestaque = () => {
                   <span className="price">
                     R$ {product.price.toFixed(2)}
                   </span>
+                  {/* Botão para adicionar ao carrinho */}
                   <button
                     onClick={() => addToCart(product)}
                     className="btn btn-primary flex items-center space-x-2"

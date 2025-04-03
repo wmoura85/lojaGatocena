@@ -8,14 +8,14 @@ const Sobre = () => {
       
       <div className="prose max-w-none">
         <p className="mb-4">
-          Bem-vindo à {APP_NAME}! Somos uma loja especializada em produtos para gatos,
-          comprometida em oferecer a melhor experiência para você e seu felino.
+          Bem-vindo à {APP_NAME}! Somos uma loja especializada camisetas legais com gatinhos fofos em artes icônicas
+          de filmes, séries e albuns musicais.
         </p>
 
         <h2 className="text-2xl font-semibold mt-6 mb-4">Nossa Missão</h2>
         <p className="mb-4">
-          Nossa missão é fornecer produtos de alta qualidade para gatos, garantindo
-          o bem-estar e a felicidade dos nossos amigos felinos.
+          Nossa missão é fornecer produtos de alta qualidade para os amantes de gatos e cultura pop, garantindo
+          o bem-estar e a felicidade de todos.
         </p>
 
         <h2 className="text-2xl font-semibold mt-6 mb-4">Nossos Valores</h2>
