@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Gerar Imagens Mocadas</title>
+    <style>
+        .tshirt-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            padding: 20px;
+        }
+        .tshirt {
+            width: 400px;
+            height: 400px;
+            background: #f0f0f0;
+            border: 2px solid #333;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-family: Arial, sans-serif;
+        }
+        .tshirt::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><path d="M50 0 L100 50 L80 100 L20 100 L0 50 Z" fill="%23ffffff" stroke="%23000" stroke-width="2"/></svg>') no-repeat center;
+            background-size: 80% 80%;
+            opacity: 0.1;
+        }
+        .tshirt-title {
+            font-size: 24px;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 10px;
+            z-index: 1;
+        }
+        .tshirt-category {
+            font-size: 18px;
+            color: #666;
+            z-index: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="tshirt-container">
+        <div class="tshirt">
+            <div class="tshirt-title">Iliminapurr</div>
+            <div class="tshirt-category">Série</div>
+        </div>
+        <div class="tshirt">
+            <div class="tshirt-title">Pulp Cat</div>
+            <div class="tshirt-category">Filme</div>
+        </div>
+        <div class="tshirt">
+            <div class="tshirt-title">Jokepurr</div>
+            <div class="tshirt-category">Álbum</div>
+        </div>
+        <div class="tshirt">
+            <div class="tshirt-title">Cat Wars</div>
+            <div class="tshirt-category">Série</div>
+        </div>
+        <div class="tshirt">
+            <div class="tshirt-title">Purr Potter</div>
+            <div class="tshirt-category">Série</div>
+        </div>
+        <div class="tshirt">
+            <div class="tshirt-title">Cat Beatles</div>
+            <div class="tshirt-category">Álbum</div>
+        </div>
+    </div>
+</body>
+</html> 
