@@ -7,20 +7,18 @@ export default {
     theme: {
       extend: {
         colors: {
-          primary: '#FF6B6B',
-          secondary: '#4ECDC4',
-          background: '#FFE5E5',
-          text: '#3D3D3D',
-          'text-secondary': '#666666',
+          primary: '#FF5C39',
+          secondary: '#FF6F3C',
+          background: '#121212',
+          text: '#FFFFFF',
+          'text-secondary': '#CCCCCC',
           'text-accent': '#FF6B6B',
           'logo-primary': '#FF6B6B',
           'logo-secondary': '#4ECDC4',
           'logo-accent': '#FFE66D',
         },
         fontFamily: {
-          sans: ['-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Oxygen',
-            'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-            'sans-serif'],
+          sans: ['Inter', 'sans-serif'],
         },
       },
     },

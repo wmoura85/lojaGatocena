@@ -11,12 +11,12 @@ const Navbar = () => {
   const cartItemCount = cart.reduce((total, item) => total + item.quantity, 0);
 
   return (
-    <nav className="bg-white shadow-md">
+    <nav className="bg-background shadow-md">
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center h-16">
           <Link to="/" className="flex items-center space-x-2">
             <img src={logo} alt={APP_NAME} className="h-8 w-8" />
-            <span className="text-2xl font-bold text-logo-primary">{APP_NAME}</span>
+            <span className="text-2xl font-bold text-white">{APP_NAME}</span>
           </Link>
 
           <div className="hidden md:flex space-x-8">
@@ -24,8 +24,8 @@ const Navbar = () => {
               <Link
                 key={item.path}
                 to={item.path}
-                className={`text-gray-600 hover:text-logo-primary transition-colors ${
-                  location.pathname === item.path ? 'text-logo-primary font-semibold' : ''
+                className={`text-text-secondary hover:text-white transition-colors ${
+                  location.pathname === item.path ? 'text-white font-semibold' : ''
                 }`}
               >
                 {item.label}
@@ -37,7 +37,7 @@ const Navbar = () => {
             <Link to="/carrinho" className="relative">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                className="h-6 w-6 text-gray-600 hover:text-logo-primary"
+                className="h-6 w-6 text-text-secondary hover:text-white"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
@@ -50,7 +50,7 @@ const Navbar = () => {
                 />
               </svg>
               {cartItemCount > 0 && (
-                <span className="absolute -top-2 -right-2 bg-logo-primary text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">
+                <span className="absolute -top-2 -right-2 bg-primary text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">
                   {cartItemCount}
                 </span>
               )}

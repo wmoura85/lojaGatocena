@@ -8,7 +8,7 @@
   }
 
   body {
-    @apply text-text antialiased min-h-screen;
+    @apply bg-background text-white antialiased min-h-screen;
   }
 
   #root {
@@ -30,35 +30,39 @@
   }
   
   .btn {
-    @apply px-4 py-2 rounded-md font-medium transition-colors duration-200;
+    @apply px-4 py-2 rounded-lg font-medium transition-colors duration-200;
   }
   
   .btn-primary {
-    @apply bg-logo-primary text-white hover:bg-logo-primary/90;
+    @apply bg-primary text-white hover:bg-secondary;
   }
   
   .btn-secondary {
-    @apply bg-logo-secondary text-white hover:bg-logo-secondary/90;
+    @apply bg-gray-800 text-primary border-2 border-primary hover:bg-primary hover:text-white;
+  }
+  
+  .btn-outline {
+    @apply border-2 border-primary text-primary hover:bg-primary hover:text-white;
   }
   
   .card {
-    @apply bg-white rounded-lg shadow-md overflow-hidden;
+    @apply bg-gray-800 rounded-lg shadow-lg overflow-hidden border border-text-secondary/10;
   }
   
   .input {
-    @apply w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-logo-primary focus:border-transparent;
+    @apply w-full px-4 py-2 bg-gray-800 border border-text-secondary/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent;
   }
 
   .section-title {
-    @apply text-3xl font-bold text-text-accent mb-6;
+    @apply text-2xl font-bold text-primary mb-8;
   }
 
   .price {
-    @apply text-xl font-semibold text-logo-secondary;
+    @apply text-xl font-semibold text-primary;
   }
 
   .category-badge {
-    @apply px-2 py-1 text-sm font-medium rounded-full bg-logo-accent text-text;
+    @apply px-2 py-1 text-sm font-medium rounded-full bg-text-secondary/10 text-text-secondary;
   }
 }
 
@@ -73,13 +77,13 @@
 
 .swiper-button-next,
 .swiper-button-prev {
-  @apply text-logo-primary !important;
+  @apply text-primary !important;
 }
 
 .swiper-pagination-bullet-active {
-  @apply bg-logo-primary !important;
+  @apply bg-primary !important;
 }
 
 .swiper-pagination-bullet {
-  @apply bg-gray-300 !important;
+  @apply bg-text-secondary/20 !important;
 }

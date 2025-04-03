@@ -1,11 +1,29 @@
 import React from 'react';
+import Button from './Button';
+import { useNavigate } from 'react-router-dom';
 
 const Banner = () => {
+  const navigate = useNavigate();
+
   return (
-    <div className="bg-[url('https://via.placeholder.com/1200x400')] bg-cover bg-center text-center py-20">
-      <h2 className="text-5xl font-bold text-white">Camisetas únicas com Gatos!</h2>
-      <p className="text-white text-xl mt-4">Estampas inspiradas nos seus filmes, séries e álbuns favoritos.</p>
-      <button className="mt-8 bg-gray-900 text-white py-2 px-6 rounded hover:bg-gray-700 transition">Veja mais</button>
+    <div className="relative overflow-hidden bg-background">
+      <div className="absolute inset-0 bg-gradient-to-r from-primary/10 to-secondary/10"></div>
+      <div className="relative max-w-7xl mx-auto py-24 px-4 sm:py-32 sm:px-6 lg:px-8">
+        <h1 className="text-4xl font-extrabold tracking-tight text-white sm:text-5xl lg:text-6xl">
+          Camisetas com Gatos
+        </h1>
+        <p className="mt-6 text-xl text-text-secondary max-w-3xl">
+          Descubra nossa coleção exclusiva de camisetas com gatos inspiradas em séries, filmes e álbuns famosos.
+        </p>
+        <div className="mt-10">
+          <Button 
+            variant="primary"
+            onClick={() => navigate('/produtos')}
+          >
+            Ver Produtos
+          </Button>
+        </div>
+      </div>
     </div>
   );
 };

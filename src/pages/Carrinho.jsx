@@ -61,25 +61,25 @@ const Carrinho = () => {
           ))}
         </div>
 
-        <div className="bg-white p-6 rounded-lg shadow-md h-fit">
-          <h2 className="text-xl font-semibold mb-4">Resumo do Pedido</h2>
+        <div className="bg-gray-800 p-6 rounded-lg shadow-md h-fit">
+          <h2 className="text-xl font-semibold mb-4 text-white">Resumo do Pedido</h2>
           <div className="space-y-2">
-            <div className="flex justify-between">
+            <div className="flex justify-between text-white">
               <span>Subtotal</span>
               <span>R$ {getCartTotal().toFixed(2)}</span>
             </div>
-            <div className="flex justify-between">
+            <div className="flex justify-between text-white">
               <span>Frete</span>
               <span>Grátis</span>
             </div>
-            <div className="border-t pt-2 mt-2">
-              <div className="flex justify-between font-semibold">
+            <div className="border-t border-text-secondary/20 pt-2 mt-2">
+              <div className="flex justify-between font-semibold text-white">
                 <span>Total</span>
                 <span>R$ {getCartTotal().toFixed(2)}</span>
               </div>
             </div>
           </div>
-          <button className="w-full bg-primary-color text-white py-2 px-4 rounded-md mt-6 hover:bg-opacity-90 transition-colors">
+          <button className="w-full bg-primary text-white py-2 px-4 rounded-md mt-6 hover:bg-secondary transition-colors">
             Finalizar Compra
           </button>
         </div>
