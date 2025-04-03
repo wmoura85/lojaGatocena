@@ -1,0 +1,52 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Iliminapurr",
+      "price": 59.90,
+      "description": "Camiseta com gato inspirada na série Illuminati",
+      "image": "camiseta1.jpg",
+      "category": "Série"
+    },
+    {
+      "id": 2,
+      "name": "Pulp Cat",
+      "price": 59.90,
+      "description": "Camiseta com gato inspirada no filme Pulp Fiction",
+      "image": "camiseta2.jpg",
+      "category": "Filme"
+    },
+    {
+      "id": 3,
+      "name": "Jokepurr",
+      "price": 59.90,
+      "description": "Camiseta com gato inspirada no álbum Joker",
+      "image": "camiseta3.jpg",
+      "category": "Álbum"
+    },
+    {
+      "id": 4,
+      "name": "Cat Wars",
+      "price": 59.90,
+      "description": "Camiseta com gato inspirada na série Star Wars",
+      "image": "camiseta4.jpg",
+      "category": "Série"
+    },
+    {
+      "id": 5,
+      "name": "Purr Potter",
+      "price": 59.90,
+      "description": "Camiseta com gato inspirada na série Harry Potter",
+      "image": "camiseta5.jpg",
+      "category": "Série"
+    },
+    {
+      "id": 6,
+      "name": "Cat Beatles",
+      "price": 59.90,
+      "description": "Camiseta com gato inspirada no álbum Abbey Road",
+      "image": "camiseta6.jpg",
+      "category": "Álbum"
+    }
+  ]
+} 
