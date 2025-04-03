@@ -61,3 +61,25 @@
     @apply px-2 py-1 text-sm font-medium rounded-full bg-logo-accent text-text;
   }
 }
+
+/* Estilos do Swiper */
+.swiper {
+  @apply w-full py-4;
+}
+
+.swiper-slide {
+  @apply h-auto;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  @apply text-logo-primary !important;
+}
+
+.swiper-pagination-bullet-active {
+  @apply bg-logo-primary !important;
+}
+
+.swiper-pagination-bullet {
+  @apply bg-gray-300 !important;
+}
