@@ -50,7 +50,7 @@ O projeto utiliza uma paleta de cores moderna e acolhedora:
 
 1. Clone o repositório:
 ```bash
-git clone https://github.com/seu-usuario/the-catverse.git
+git clone https://github.com/wmoura85/lojaGatocena.git
 ```
 
 2. Instale as dependências:
