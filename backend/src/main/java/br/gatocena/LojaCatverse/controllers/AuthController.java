@@ -4,6 +4,7 @@ import br.gatocena.LojaCatverse.domain.user.Usuario;
 import br.gatocena.LojaCatverse.dto.LoginRequestDTO;
 import br.gatocena.LojaCatverse.dto.RegisterRequestDTO;
 import br.gatocena.LojaCatverse.dto.ResponseDTO;
+import br.gatocena.LojaCatverse.enums.TipoUsuario;
 import br.gatocena.LojaCatverse.infra.security.TokenService;
 import br.gatocena.LojaCatverse.repositories.UserRepository;
 import lombok.RequiredArgsConstructor;
@@ -14,6 +15,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.Locale;
 import java.util.Optional;
 
 @RestController
@@ -38,13 +40,19 @@ public class AuthController {
     public ResponseEntity register(@RequestBody RegisterRequestDTO body) {
         Optional<Usuario> usuario = this.repository.findByEmail(body.email());
 
+
         if (usuario.isEmpty()) {
             Usuario novoUsuario = new Usuario();
             novoUsuario.setPassword(passwordEncoder.encode(body.password()));
             novoUsuario.setEmail(body.email());
             novoUsuario.setNome(body.nome());
-            this.repository.save(novoUsuario);
+            TipoUsuario tipo = body.tipoUsuario() != null
+                    ? TipoUsuario.valueOf(body.tipoUsuario().toUpperCase(Locale.ROOT))
+                    : TipoUsuario.CLIENTE;
 
+            novoUsuario.setTipoUsuario(tipo);
+
+            this.repository.save(novoUsuario);
 
             String token = this.tokenService.generateToken(novoUsuario);
             return ResponseEntity.ok(new ResponseDTO(novoUsuario.getNome(), token));

@@ -3,6 +3,7 @@ package br.gatocena.LojaCatverse.infra.security;
 import br.gatocena.LojaCatverse.domain.user.Usuario;
 import br.gatocena.LojaCatverse.repositories.UserRepository;
 import jakarta.servlet.FilterChain;
+import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,15 +26,15 @@ public class SecurityFilter extends OncePerRequestFilter {
     UserRepository userRepository;
 
     @Override
-    protected void doFilfterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain) throws SerialException, IOException {
+    protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain) throws ServletException, IOException {
         var token = this.recoverToken(request);
         var login = tokenService.validateToken(token);
 
         if (login != null) {
-            Usuario usuario = UserRepository.findByEmail(login).orElseThrow(() -> new RuntimeException("Usuario não encontrado"));
+            Usuario usuario = userRepository.findByEmail(login).orElseThrow(() -> new RuntimeException("Usuario não encontrado"));
             var authorities = Collections.singletonList(new SimpleGrantedAuthority("ROLE_USER"));
             var authentication = new UsernamePasswordAuthenticationToken(usuario, null, authorities);
-            SecurityContextHolder.getContext().getAuthentication(authentication);
+            SecurityContextHolder.getContext().setAuthentication(authentication);
         }
         filterChain.doFilter(request, response);
     }

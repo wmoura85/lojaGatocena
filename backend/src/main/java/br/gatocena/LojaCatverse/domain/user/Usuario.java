@@ -43,10 +43,10 @@ public class Usuario {
     private Boolean ativo = true;
 
     @Enumerated(EnumType.STRING)
-    @Column(nullable = false)
+    @Column(nullable = true)
     private TipoUsuario tipoUsuario;
 
-    @OneToMany(mappedBy = "Usuario", cascade = CascadeType.ALL, orphanRemoval = true)
+    @OneToMany(mappedBy = "usuario", cascade = CascadeType.ALL, orphanRemoval = true)
     @JsonManagedReference
     private List<Endereco> enderecos = new ArrayList<>();
 

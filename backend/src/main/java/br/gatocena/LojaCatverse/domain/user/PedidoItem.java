@@ -32,5 +32,5 @@ public class PedidoItem {
 
     @ManyToOne
     @JoinColumn(name = "produto_id", nullable = false)
-    private Produto produto_id;
+    private Produto produto;
 }
