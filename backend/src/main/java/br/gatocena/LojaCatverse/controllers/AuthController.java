@@ -1,9 +1,9 @@
 package br.gatocena.LojaCatverse.controllers;
 
 import br.gatocena.LojaCatverse.domain.user.Usuario;
-import br.gatocena.LojaCatverse.dto.LoginRequestDTO;
-import br.gatocena.LojaCatverse.dto.RegisterRequestDTO;
-import br.gatocena.LojaCatverse.dto.ResponseDTO;
+import br.gatocena.LojaCatverse.dto.request.LoginRequestDTO;
+import br.gatocena.LojaCatverse.dto.request.RegisterRequestDTO;
+import br.gatocena.LojaCatverse.dto.response.ResponseDTO;
 import br.gatocena.LojaCatverse.enums.TipoUsuario;
 import br.gatocena.LojaCatverse.infra.security.TokenService;
 import br.gatocena.LojaCatverse.repositories.UserRepository;

@@ -42,4 +42,12 @@ public class Pedido {
 
     @OneToMany(mappedBy = "pedido_id", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<PedidoItem> itens = new ArrayList<>();
+
+    //Metodo que multiplica o preço unitario pela quantidade para retornar o valor total de um determinado pedido
+    public void calcularValorTotal() {
+        this.valorTotal = itens.stream()
+                .map(item -> item.getPrecoUnit().multiply(BigDecimal.valueOf(item.getQtd())))
+                .reduce(BigDecimal.ZERO, BigDecimal::add);
+    }
+
 }

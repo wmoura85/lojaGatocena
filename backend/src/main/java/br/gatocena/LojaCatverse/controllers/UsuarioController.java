@@ -1,8 +1,8 @@
 package br.gatocena.LojaCatverse.controllers;
 
 import br.gatocena.LojaCatverse.domain.user.Usuario;
-import br.gatocena.LojaCatverse.dto.UsuarioRequestDTO;
-import br.gatocena.LojaCatverse.dto.UsuarioResponseDTO;
+import br.gatocena.LojaCatverse.dto.request.UsuarioRequestDTO;
+import br.gatocena.LojaCatverse.dto.response.UsuarioResponseDTO;
 import br.gatocena.LojaCatverse.repositories.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
