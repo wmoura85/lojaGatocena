@@ -7,6 +7,7 @@ import Contato from './pages/Contato';
 import Carrinho from './pages/Carrinho';
 import Navbar from './components/Navbar';
 import Rodape from './components/Rodape';
+import { Login } from './pages/Login/Login';
 import './App.css';
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
             <Route path="/sobre" element={<Sobre />} />
             <Route path="/contato" element={<Contato />} />
             <Route path="/carrinho" element={<Carrinho />} />
+            <Route path="/login" element={<Login />} />
           </Routes>
         </main>
         <Rodape />
